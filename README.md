@@ -30,6 +30,13 @@ com.github.cuzfrog.scmd.runtime = debug
 com.github.cuzfrog.scmd.runtime.SomeObject$ = trace
 ```
 
+### Change logger name:
+```scala
+class MyClass extends SimpleLogging{
+  override val loggerAgent = classOf[WhatEver].getName
+}
+```
+
 ### AOP logging:
 A scalameta annotation is shipped for control single AOP method:
 ```scala
