@@ -6,9 +6,9 @@ import scala.util.Try
   *
   * Created by cuz on 2016-08-17.
   */
-trait SimpleLogger {
+trait SimpleLogging {
 
-  import SimpleLogger._
+  import SimpleLogging._
   import Console._
 
   private val LIGHT_BLUE = "\u001b[94m"
@@ -32,7 +32,7 @@ trait SimpleLogger {
 
 }
 
-object SimpleLogger {
+object SimpleLogging {
   class LoggerAgent(val name: String) extends AnyVal{
     override def toString: String = name
   }
