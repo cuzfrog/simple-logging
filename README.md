@@ -33,7 +33,7 @@ com.github.cuzfrog.scmd.runtime.SomeObject$ = trace
 ### Change logger name:
 ```scala
 class MyClass extends SimpleLogging{
-  override val loggerAgent = classOf[WhatEver].getName
+  override lazy val loggerAgent = classOf[WhatEver].getName
 }
 ```
 
