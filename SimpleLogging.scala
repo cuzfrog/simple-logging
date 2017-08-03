@@ -1,7 +1,7 @@
 import scala.util.Try
 
 /**
-  * Override val loggerAgent for logger name display.
+  * Override def loggerAgent for logger name display.
   * Override val loggerLevel for manual level control.
   *
   * Created by cuz on 2016-08-17.
@@ -13,7 +13,7 @@ trait SimpleLogging {
 
   private val LIGHT_BLUE = "\u001b[94m"
 
-  protected implicit val loggerAgent: LoggerAgent = this.getClass.getName
+  protected implicit def loggerAgent: LoggerAgent = this.getClass.getName
   protected implicit val loggerLevel: Level = queryLevel(this.getClass.getName)
 
   protected final def trace(x: => Any, withTitle: Boolean = true): Unit = pl(x, Trace, LIGHT_BLUE)(withTitle)
